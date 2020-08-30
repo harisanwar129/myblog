@@ -37,3 +37,7 @@ Route::get('/family/{name}',function($name){
 });
 
 Route::get('category','CategoryController@index');
+
+Route::get('home',function(){
+    return view('templates');
+});
