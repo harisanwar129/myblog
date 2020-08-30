@@ -5,7 +5,12 @@
     <title>Halaman Category</title>
 </head>
 <body>
-        <h3>Category</h3>
-        <p>ini adalah halaman category</p>
+        <h3>{{$title}}</h3>
+        <?php
+        foreach ($list as $raw){
+           echo $raw;
+        }
+        ?>
+
 </body>
 </html>

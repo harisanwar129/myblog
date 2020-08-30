@@ -14,7 +14,9 @@ class CategoryController extends Controller
     public function index()
     {
         //
-       return view('category');
+       $title="daftar kategori"; 
+       $list=array('baju','handphone','sepatu','celana');
+       return view('category',compact('title','list'));
     }
 
     /**
