@@ -18,11 +18,20 @@ Route::get('/', function () {
 Route::get('/profil',function(){
     echo 'nama saya haris';
 });
-
+// parameter route
 Route::get('/daftar-teman',function(){
     return view('daftar-teman');
 });
 
 Route::get('/family/{name}/{umur?}',function($name,$umur=null){
     return  "nama saya " .$name. " berumur "  .$umur;
+});
+// group route
+Route::prefix('admin')->group(function(){
+Route::get('/profil',function(){
+    echo 'nama saya haris';
+})->name('admin.profils');
+Route::get('/family/{name}',function($name){
+    return  "nama saya " .$name. " berumur " ;
+});
 });
