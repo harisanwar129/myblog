@@ -22,3 +22,7 @@ Route::get('/profil',function(){
 Route::get('/daftar-teman',function(){
     return view('daftar-teman');
 });
+
+Route::get('/family/{name}/{umur?}',function($name,$umur=null){
+    return  "nama saya " .$name. " berumur "  .$umur;
+});
