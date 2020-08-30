@@ -35,3 +35,5 @@ Route::get('/family/{name}',function($name){
     return  "nama saya " .$name. " berumur " ;
 });
 });
+
+Route::get('category','CategoryController@index');
