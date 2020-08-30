@@ -36,4 +36,6 @@ Route::get('/family/{name}',function($name){
 });
 });
 
-Route::get('category/{name?}','CategoryController@index');
+Route::get('category',function(){
+    return view ('category');
+});
