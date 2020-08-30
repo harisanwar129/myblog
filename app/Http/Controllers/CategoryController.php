@@ -11,10 +11,10 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($name=null)
     {
         //
-        echo "ini halaman index category";
+        echo "ini Kategori:".$name;
     }
 
     /**
