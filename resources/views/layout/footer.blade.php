@@ -1,1 +1,8 @@
-<h1>Ini Footer</h1>
+@component('layout.daftarfooter')
+    @slot('sosmed')
+        Social Media
+    @endslot
+    @slot('tos')
+        Social Media
+    @endslot
+@endcomponent
