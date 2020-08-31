@@ -41,3 +41,10 @@ Route::get('category','CategoryController@index');
 Route::get('home',function(){
     return view('templates');
 });
+
+Route::get('about',function(){
+    return view('about');
+})->name('abouts');
+Route::get('contact',function(){
+    return view('contact');
+});
