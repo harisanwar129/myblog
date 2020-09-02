@@ -68,5 +68,10 @@ public function insert(){
                         ->update($dataprofils);
                         return redirect('users');
     }
-  
+    public function delete(){
+        $deleteprofils=DB::table('users')
+                    ->where('id',14)
+                    ->delete();
+                    return redirect('users');
+    }
 }
