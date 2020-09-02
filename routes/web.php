@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 
 Route::get('/users','profilsController@index');
+Route::get('/add','profilsController@add');
