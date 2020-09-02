@@ -44,5 +44,10 @@ class profilsController extends Controller
         return $users;
 
     }
+    public function delete(){
+        $users=user::find(6);
+        $users->delete();
+        return $users;
+    }
 }
  
