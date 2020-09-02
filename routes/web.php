@@ -49,3 +49,4 @@ Route::get('contact',function(){
     return view('contact');
 });
 Route::get('/users','usersController@index');
+Route::get('/addusers','usersController@insert');
