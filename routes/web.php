@@ -50,3 +50,4 @@ Route::get('contact',function(){
 });
 Route::get('/users','usersController@index');
 Route::get('/addusers','usersController@insert');
+Route::get('/updateusers','usersController@update');

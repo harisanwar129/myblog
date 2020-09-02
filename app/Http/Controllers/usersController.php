@@ -54,6 +54,19 @@ public function insert(){
                 ->insert($dataprofils);              
             return redirect('users');
 }
-    
+    public function update(){
+        // data profils
+        $dataprofils=[
+                "alamat"=>"jakarta",
+                "tempat_lahir"=>"cipanas",
+                "waktu_lahir"=>"1998-02-24",
+              
+            ];
+            // update data
+            $profilsdata=DB::table('profils')
+                        ->where('user_id',2)
+                        ->update($dataprofils);
+                        return redirect('users');
+    }
   
 }
