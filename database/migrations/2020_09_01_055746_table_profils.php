@@ -15,13 +15,14 @@ class TableProfils extends Migration
     {
         Schema::create('profils', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('alamat');
-            $table->string('tempat_lahir');
-            $table->date('waktu_lahir');
+            $table->string('name',60);
+            $table->string('nik',60);
+            $table->string('address',60);
+            $table->string('no_hp',12);
             $table->unsignedInteger('user_id');//kuncu tamu dari table ini
             $table->foreign('user_id')
-                  ->references('id')
                   ->on('users')
+                  ->references('id')
                   ->onUpdate('cascade')
                   ->onDelete('cascade');
             $table->timestamps();

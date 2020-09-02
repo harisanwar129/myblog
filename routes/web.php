@@ -15,40 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/profil',function(){
-    echo 'nama saya haris';
-});
-// parameter route
-Route::get('/daftar-teman',function(){
-    return view('daftar-teman');
-});
-
-Route::get('/family/{name}/{umur?}',function($name,$umur=null){
-    return  "nama saya " .$name. " berumur "  .$umur;
-});
-// group route
-Route::prefix('admin')->group(function(){
-Route::get('/profil',function(){
-    echo 'nama saya haris';
-})->name('admin.profils');
-Route::get('/family/{name}',function($name){
-    return  "nama saya " .$name. " berumur " ;
-});
-});
-
-Route::get('category','CategoryController@index');
-
-Route::get('home',function(){
-    return view('templates');
-});
-
-Route::get('about',function(){
-    return view('about');
-})->name('abouts');
-Route::get('contact',function(){
-    return view('contact');
-});
-Route::get('/users','usersController@index');
-Route::get('/addusers','usersController@insert');
-Route::get('/updateusers','usersController@update');
-Route::get('/deleteusers','usersController@delete');
+Route::get('/users','profilsController@index');
