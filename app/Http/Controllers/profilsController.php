@@ -28,5 +28,21 @@ class profilsController extends Controller
      $users->profil()->save($profils);
      return $users;
     }
+    public function update(){
+        $users=user::find(3);
+        $datausers=[
+            "username"=>"sarudud",
+            "email"=>"sarudud@mail.com",
+            "password"=>md5('udud')
+        ];
+        $dataprofils=[
+            "name"=>"udud",
+            "nik"=>"131"
+        ];
+        $users->update($datausers);
+        $users->profil()->update($dataprofils);
+        return $users;
+
+    }
 }
  

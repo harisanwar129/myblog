@@ -8,6 +8,6 @@ class user extends Model
 {
   protected $guarded=[];
    public function profil(){
-       return $this->hasOne('app\profil');
+       return $this->hasOne('App\profil');
    }
 }
