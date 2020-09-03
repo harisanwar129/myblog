@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\user;
 use App\profil;
+use App\posts;
 class profilsController extends Controller
 {
     public function index(){
@@ -48,6 +49,10 @@ class profilsController extends Controller
         $users=user::find(6);
         $users->delete();
         return $users;
+    }
+    public function posts(Request $req){
+        $datausersposts=user::find($req->id);
+        return view('detail',compact('datausersposts'));
     }
 }
  
