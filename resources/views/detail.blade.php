@@ -17,6 +17,8 @@
 </div>
 <br>
 <br>
-<a href="{{url('posts')}}" class="btn btn primasy">Penerbit</a>
+<a href="{{url('allposts')}}" class="btn btn primasy">Penerbit</a>
+@endsection
+@section('kembali')
 @endsection
 @show

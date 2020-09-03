@@ -6,7 +6,7 @@
     <th>Name</th>
     <th>Username</th>
     <th>Email</th>
-    <th>View</th>
+    <th>Post</th>
     </tr>
     <?php
     foreach($profils as $profil){
@@ -19,6 +19,8 @@
     }
     ?>
 </table>
-
+@section('kembali')
 @endsection
+@endsection
+
 @show

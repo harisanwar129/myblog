@@ -18,4 +18,6 @@
 </table>
 <a href="{{url('users')}}" class="btn btn primasy">kembali</a>
 @endsection
+@section('kembali')
+@endsection
 @show

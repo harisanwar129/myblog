@@ -20,4 +20,5 @@ Route::get('/add','profilsController@add');
 Route::get('/update','profilsController@update');
 Route::get('/delete','profilsController@delete');
 Route::get('/postsbyusers/{id}','profilsController@posts');
-Route::get('/posts','postsController@index');
+Route::get('/allposts','postsController@index');
+Route::get('/addpost','postsController@add');

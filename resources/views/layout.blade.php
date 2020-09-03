@@ -7,7 +7,10 @@
 </head>
 <body>
     <div class="container">
+    <a href="{{url('users')}}" class="btn btn-primary">Users</a>
+    <a href="{{url('allposts')}}" class="btn btn-primary">allpost</a>
         @yield('content')
     </div>
 </body>
+
 </html>
