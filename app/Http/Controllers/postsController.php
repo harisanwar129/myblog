@@ -38,4 +38,9 @@ class postsController extends Controller
             ->update($databaru);
             return redirect('allposts');
     }
+    public function delete(){
+        $users=user::findOrfail(2);
+        $users->post()->where('id',3)->delete();
+        return redirect('allposts');
+    }
 }
