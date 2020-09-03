@@ -26,4 +26,16 @@ class postsController extends Controller
     
         return redirect('users');
     }
+    public function update(){
+        $users=user::find(2);
+        $users->username="uchiha haris";    
+        $users->save();
+        $databaru=[
+            "title"=>"uchiha",
+            "body"=>"uchiha clan elit"
+        ];    
+        $users->post()->where('id',3)
+            ->update($databaru);
+            return redirect('allposts');
+    }
 }
