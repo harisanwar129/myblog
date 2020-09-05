@@ -8,16 +8,12 @@
 
     </tr>
     <?php
-    foreach($postsusers as $p){
-            echo "<tr>";
-            echo "<td>".$p->title."</td>";
-            echo "<td>".$p->user->username."</td>";
-            echo "</tr>";   
+    foreach($categories as $c){
+            echo $c->post->title;  
     }
     ?>
 </table>
 <a href="{{url('users')}}" class="btn btn primasy">kembali</a>
-<a href="{{url('postbycategory')}}" class="btn btn primasy">postcategory</a>
 @endsection
 @section('kembali')
 @endsection

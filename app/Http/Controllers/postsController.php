@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\user;
 use App\profil;
 use App\posts;
+use App\Category;
 class postsController extends Controller
 {
     public function index(){
@@ -43,4 +44,29 @@ class postsController extends Controller
         $users->post()->where('id',3)->delete();
         return redirect('allposts');
     }
+    public function postbycategory(){
+            $categories=Category::all();
+            
+            return view('postbycategory',compact('categories'));
+    }
+    public function categorypost(){
+            $posts=posts::all();
+            
+           foreach ($posts as $key){
+              var_dump( $key->category()->name);
+             
+           }
+           
+    }
+    public function insertpostscategories(){
+               $users=user::find(2);
+               $dataposts=["title"=>"ini hasil dari insert",
+                           "body"=>"ini hasil dari insert"    
+                                        ];
+               $datacategoris=["name"=>"ini hasil dari insert"];
+               $users->post()->create($dataposts)->category()->create($datacategoris);
+               return redirect('allpost');                         
+           }
+
 }
+ 

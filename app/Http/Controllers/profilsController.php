@@ -55,4 +55,4 @@ class profilsController extends Controller
         return view('detail',compact('datausersposts'));
     }
 }
- 
+  

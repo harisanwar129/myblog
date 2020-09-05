@@ -14,4 +14,7 @@ class user extends Model
    public function post(){
        return $this->hasMany('App\posts');
    }
+   public function category(){
+       return $this->hasMany('App\Category');
+   }
 }

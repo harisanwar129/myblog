@@ -24,3 +24,6 @@ Route::get('/allposts','postsController@index');
 Route::get('/addpost','postsController@add');
 Route::get('/updatepost','postsController@update');
 Route::get('/deletepost','postsController@delete');
+Route::get('/postbycategory','postsController@postbycategory');
+Route::get('/categorypost','postsController@categorypost');
+Route::get('/insertpostscategories','postsController@insertpostscategories');
